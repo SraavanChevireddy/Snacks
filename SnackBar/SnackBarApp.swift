@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct SnackBarApp: App {
+    @StateObject var toastVM = ToastViewModel()
+    
     var body: some Scene {
+        
         WindowGroup {
             ContentView()
+            .environmentObject(toastVM)
         }
     }
 }
